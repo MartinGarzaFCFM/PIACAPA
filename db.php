@@ -11,9 +11,10 @@ class DB{
 
   public function __construct()
   {
-    $this->host = 'localhost';
+    $this->host = 'piacapa-db.mysql.database.azure.com';
     $this->db = 'Linea';
-    $this->user = 'root';
+    $this->user = 'martingarza';
+    $this->password = 'Mstc94076';
     $this->charset = 'utf8mb4';
   }
 
