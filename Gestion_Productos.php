@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['user_id'])) {
     // Si 'user_id' no está definido, redirige al inicio de sesión
-    header("Location: Loginn.php");
+    header("Location: ./db/Login.php");
     exit();
 }
 ?>

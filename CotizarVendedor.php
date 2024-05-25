@@ -4,7 +4,7 @@ include_once 'db/consulta.php';
 if (!isset($_SESSION['user_id'])) {
     // El usuario no ha iniciado sesión o la sesión ha expirado
     // Puedes redirigirlo a la página de inicio de sesión u otra acción adecuada.
-    header("Location: Loginn.php");
+    header("Location: ./db/Login.php");
     exit();
 }
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
