@@ -1,5 +1,5 @@
 FROM php:8.2-apache
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN docker-php-ext-install mysqli pdo pdo_mysql exif
 RUN a2enmod dir
 RUN echo 'DirectoryIndex index.php' > /etc/apache2/mods-enabled/dir.conf
 RUN echo 'file_uploads = On' >> /usr/local/etc/php/php.ini
