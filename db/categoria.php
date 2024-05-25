@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Validaciones de los datos ingresados
         if (empty($nombreCategoria) || empty($descripcionCategoria)) {
             echo "<script type='text/javascript'>alert('Por favor, completa todos los campos.');</script>";
-            echo "<script type='text/javascript'>window.location.href = '../Home.php';</script>";
+            echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
         } else {
             // Procede a insertar la categoría en la base de datos
             $consulta = new consulta();

@@ -30,7 +30,7 @@ if (!isset($_SESSION['user_id'])) {
 <title>Electronica</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-<link rel="stylesheet" href="Home.css">
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -92,7 +92,7 @@ if (!isset($_SESSION['user_id'])) {
 <!-- Barra superior -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom">
     <div class="container">
-        <a class="navbar-brand"  href="home.php">
+        <a class="navbar-brand"  href="index.php">
             <img src="logo_minimarket.png" alt="Logo" width="40" height="40">
         </a>
      <!--   <div class="dropdown">

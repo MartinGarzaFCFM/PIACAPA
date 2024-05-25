@@ -9,7 +9,7 @@ function login(){
       return;
   }
 
-  //window.location.href="Home.php";
+  //window.location.href="index.php";
 };
 //var contrasena = /(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
 var contrasena ='^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.{8,})';

@@ -40,7 +40,7 @@ if (isset($_POST['login'])) {
             $_SESSION['user_rol'] = $usuarioDB['rol'];
             $_SESSION['user_priv'] = $usuarioDB['Privacidad'];
          
-            header("Location: ../Home.php");
+            header("Location: ../index.php");
             exit();
             // } else {
             //     echo "<script language='JavaScript'>
@@ -99,7 +99,7 @@ class nombres {
             session_start();
             $_SESSION['usuario'] = $usuarioDB['usuario'];
             $_SESSION['id'] = $usuarioDB['id'];
-            header('Location: ../Home.php'); 
+            header('Location: ../index.php'); 
             exit();
         } else {
             

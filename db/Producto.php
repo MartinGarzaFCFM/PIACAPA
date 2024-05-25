@@ -49,7 +49,7 @@ function registrarProducto($tipo, $nombreProducto, $descripcionProducto, $precio
     if ($videoBase64 !== null) {
         $consulta->registrarProducto($tipo, $nombreProducto, $descripcionProducto, $precioProducto, $cantidadProducto, $categoriaProducto, $videoBase64, $imagen_base64, $user_id, $materialProducto, $medidasProducto);
         echo "<script type='text/javascript'>alert('Producto registrado exitosamente.');</script>";
-        echo "<script type='text/javascript'>window.location.href = '../Home.php';</script>";
+        echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
     } else {
         echo "<script type='text/javascript'>alert('El archivo seleccionado no es un video válido.');</script>";
     }
@@ -77,7 +77,7 @@ function registrarProductoCotizable($tipo, $nombreProducto, $descripcionProducto
     if ($videoBase64 !== null) {
         $consulta->registrarProductoCotizable($tipo, $nombreProducto, $descripcionProducto, $precioProducto, $cantidadProducto, $categoriaProducto, $videoBase64, $imagen_base64, $materialProducto, $medidasProducto, $user_id);
         echo "<script type='text/javascript'>alert('Producto registrado exitosamente.');</script>";
-        echo "<script type='text/javascript'>window.location.href = '../Home.php';</script>";
+        echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
     } else {
         echo "<script type='text/javascript'>alert('El archivo seleccionado no es un video válido.');</script>";
     }
@@ -169,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Llama a la función con las rutas de los archivos y la imagen en base64
             $consulta->registrarProducto($tipo, $nombreProducto, $descripcionProducto, $preciopro, $cantidadpro, $categoriapro, $videoBase64, $imagen_base64, $user_id);
             echo "<script type='text/javascript'>alert('Producto registrado exitosamente.');</script>";
-            echo "<script type='text/javascript'>window.location.href = '../Home.php';</script>";
+            echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
         }
     }
 }

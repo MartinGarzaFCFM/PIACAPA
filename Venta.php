@@ -29,7 +29,7 @@ echo "¡Bienvenido! Tu ID de usuario es: $user_id";
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom">
     <div class="container">
-        <a class="navbar-brand" href="Home.html">
+        <a class="navbar-brand" href="index.html">
             <img src="logo_minimarket.png" alt="Logo" width="40" height="40">
         </a>
         <div class="dropdown">

@@ -32,7 +32,7 @@ var_dump($user_id);
 <!-- Barra superior -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-custom">
     <div class="container">
-        <a class="navbar-brand" href="Home.php">
+        <a class="navbar-brand" href="index.php">
             <img src="logo_minimarket.png" alt="Logo" width="40" height="40">
         </a>
       <!--   <ul class="navbar-nav mr-auto">

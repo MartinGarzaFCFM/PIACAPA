@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['RegisterLista'])) {
             $consulta->registrarLista($nombreLista, $descripcionLista, $privacidadLista, $creadorLista);
 
             echo "<script type='text/javascript'>alert('Lista creada exitosamente.');</script>";
-            echo "<script type='text/javascript'>window.location.href = '../Home.php';</script>";
+            echo "<script type='text/javascript'>window.location.href = '../index.php';</script>";
         }
     }
 }

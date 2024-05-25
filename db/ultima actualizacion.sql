@@ -76,8 +76,8 @@ END //
 DELIMITER ;
 
 
--- esta vista si funciona pero como quiero saber si el producto cotizado es 0 no me lo mostrara en home.php
--- entonces necesita ser 1 para que se vea en home.php
+-- esta vista si funciona pero como quiero saber si el producto cotizado es 0 no me lo mostrara en index.php
+-- entonces necesita ser 1 para que se vea en index.php
 -- CREATE VIEW VistaFiltrarProductoo AS
 -- -SELECT 
   --  PRODUCTO.ID_PRO,

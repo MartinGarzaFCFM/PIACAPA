@@ -1,7 +1,7 @@
 FROM php:8.2-apache
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN a2enmod dir
-RUN echo 'DirectoryIndex Home.php' > /etc/apache2/mods-enabled/dir.conf
+RUN echo 'DirectoryIndex index.php' > /etc/apache2/mods-enabled/dir.conf
 COPY . /var/www/html/
 WORKDIR /var/www/html/
 EXPOSE 80
