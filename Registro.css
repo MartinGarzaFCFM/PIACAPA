@@ -1,0 +1,29 @@
+
+
+.container.my-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.card {
+  width: 85%; 
+  max-width: 85%; 
+  margin: auto; 
+  margin-right: 500px; 
+  background-color: #e2e6e8; 
+  box-shadow: 0px 4px 8px rgba(19, 61, 176, 0.801); 
+}
+
+
+.btn-primary.text-center {
+  display: block;
+  margin: 0 auto;
+  background-color:  rgb(45, 93, 213); 
+}
+
+
+body {
+  background-color: #a2c7ff;
+}

@@ -1,0 +1,132 @@
+	
+	if (isset($_POST['registro'])) {
+		
+
+		$email = $_POST['email'];
+		$fullname = $_POST['fullname'];
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		$birthdate = $_POST['birthdate'];
+	
+		if (
+			!filter_var($email, FILTER_VALIDATE_EMAIL) || 
+			!preg_match('/^[A-Za-z ]+$/', $fullname) || 
+			strlen($username) < 3 || 
+			!preg_match('/^(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z]).{8,}$/', $password) || 
+			empty($birthdate) || 
+			!DateTime::createFromFormat('Y-m-d', $birthdate)
+			
+		) {
+			// Si alguna de las validaciones falla, no registr al usuario
+			echo "Error en los datos ingresados. Verifica la información.";
+		} else {
+	
+	$obj = new nombres();
+	$obj->registrarUsuario();
+			
+			echo "Registro exitoso. Redirigiendo a la página de inicio de sesión...";
+		
+			echo "<script type='text/javascript'>alert('Usuario registrado exitosamente.'); window.location.assign('login.php');</script>";
+		}
+	}
+
+DELIMITER 
+
+
+CREATE PROCEDURE InsertarUsuarioVerifica(
+    IN p_usuario VARCHAR(255),
+    IN p_contrasena VARCHAR(255),
+    IN p_correo VARCHAR(255),
+    IN p_Nombre VARCHAR(255),
+    IN p_nacimiento DATE,
+    IN p_sexo VARCHAR(15),
+    IN p_rol INT,
+    IN p_UsuImagenes TEXT,
+    IN p_Privacidad BOOLEAN
+)
+BEGIN
+    -- Verificar si el correo o usuario ya existen en la base de datos
+    IF EXISTS (SELECT * FROM usuario WHERE usuario = p_usuario OR correo = p_correo) THEN
+        SELECT 'El correo o usuario ya existen' AS 'RESULTADO';
+    ELSE
+        -- Insertar un nuevo usuario en la base de datos
+        INSERT INTO usuario (usuario, contrasena, correo, Nombre, nacimiento, sexo, creacion, rol, UsuImagenes, Privacidad)
+        VALUES (p_usuario, p_contrasena, p_correo, p_Nombre, p_nacimiento, p_sexo, CURDATE(), p_rol, p_UsuImagenes, p_Privacidad);
+        SELECT 'Usuario insertado correctamente' AS 'RESULTADO';
+    END IF;
+END //
+DELIMITER ;
+	if (isset($_POST['registro'])) {
+		$email = $_POST['email'];
+		$fullname = $_POST['fullname'];
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		$birthdate = $_POST['birthdate'];
+	
+		$obj = new nombres();
+	
+		// Realiza la verificación de correo y usuario existentes
+		$result = $obj->verificarCorreoYUsuarioExistentes($email, $username);
+	
+		if ($result['RESULTADO'] === 'El correo o usuario ya existen') {
+			echo "El correo o el nombre de usuario ya están registrados en la base de datos.";
+		} else {
+			// Procede con las otras validaciones y el registro
+			if (
+				!filter_var($email, FILTER_VALIDATE_EMAIL) || 
+				!preg_match('/^[A-Za-z ]+$/', $fullname) || 
+				strlen($username) < 3 || 
+				!preg_match('/^(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z]).{8,}$/', $password) || 
+				empty($birthdate) || 
+				!DateTime::createFromFormat('Y-m-d', $birthdate)
+			) {
+				echo "Error en los datos ingresados. Verifica la información.";
+			} else {
+				$obj->registrarUsuario();
+				echo "Registro exitoso. Redirigiendo a la página de inicio de sesión...";
+				echo "<script type='text/javascript'>alert('Usuario registrado exitosamente.'); window.location.assign('login.php');</script>";
+			}
+		}
+	}
+	if (isset($_POST['registro'])) {
+		$email = $_POST['email'];
+		$fullname = $_POST['fullname'];
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		$birthdate = $_POST['birthdate'];
+	
+		$obj = new nombres();
+	
+		
+	// Realiza la verificación de correo y usuario existentes
+    $result = $obj->verificarCorreoYUsuarioExistentes($email, $username);
+	
+		if ($correoExiste) {
+			echo "El correo ya está registrado en la base de datos.";
+		} elseif ($usuarioExiste) {
+			echo "El nombre de usuario ya está registrado en la base de datos.";
+		} else {
+			// Si las validaciones de correo y usuario pasan, verifica las otras condiciones
+			if (
+				!filter_var($email, FILTER_VALIDATE_EMAIL) || 
+				!preg_match('/^[A-Za-z ]+$/', $fullname) || 
+				strlen($username) < 3 || 
+				!preg_match('/^(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z]).{8,}$/', $password) || 
+				empty($birthdate) || 
+				!DateTime::createFromFormat('Y-m-d', $birthdate)
+			) {
+				echo "Error en los datos ingresados. Verifica la información.";
+			} else {
+				// Los datos son válidos, procede con el registro
+				$obj->registrarUsuario();
+				echo "Registro exitoso. Redirigiendo a la página de inicio de sesión...";
+				echo "<script type='text/javascript'>alert('Usuario registrado exitosamente.'); window.location.assign('login.php');</script>";
+			}
+		}
+	}
+	   
+        function verificarCorreoYUsuarioExistentes($correo, $usuario) {
+            $query = $this->connect()->prepare('CALL VerificarCorreoYUsuarioExistentes(?, ?)');
+            $query->execute([$correo, $usuario]);
+            return $query->fetch(PDO::FETCH_ASSOC);
+        }

@@ -1,0 +1,99 @@
+.navbar-custom {
+    background-color: rgb(45, 93, 213) !important; 
+  }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; 
+  box-shadow: 0px 2px 4px rgb(9, 64, 182); /
+}
+
+body {
+  background-color: #a2c7ff;
+}
+
+.landing-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(223, 234, 255, 0.2);
+}
+
+
+.container.text-center {
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+
+.btn-primary {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+}
+
+
+
+.carousel-image {
+  max-width: 55%;
+  height: auto;
+  max-height: 2; 
+  margin: 0 auto; 
+}
+.carousel-container {
+  position: relative;
+  height: 400px; 
+  overflow: hidden;
+  margin-top: 50px; 
+}
+
+.carousel-inner {
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  max-height: 100%;
+}
+
+
+.content-container {
+  padding: 100px;
+  position: absolute;
+  bottom: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #a2c7ff;
+}
+
+h1, p, .btn-primary {
+  margin: 10px 0;
+}
+
+
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:  rgb(2, 37, 128) ;
+    color: white;
+    padding: 10px 0;
+  }
+
+
+ 
+
+  
+    

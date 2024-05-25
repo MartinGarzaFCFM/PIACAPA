@@ -1,0 +1,3 @@
+Agregue validacion regx en contraseña: consulta.php (registro)
+Agregue verificar el correo/usuario  que no haya duplicados. api.php (registro).
+Mejore el inicio de sesion mandando a llamar la verificacion de credenciales y sus roles.

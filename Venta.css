@@ -1,0 +1,47 @@
+.navbar-custom {
+    background-color: rgb(45, 93, 213) !important; 
+  }
+
+
+
+body {
+  background-color: #d8d9da;
+}
+
+.container-existencia{
+    max-width: 1150px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #3c3e44;
+    border-radius: 10px;
+    background-color: rgba(45, 93, 213, 0.356) ;
+}
+
+  
+
+
+.container-consulta {
+    max-width: 1150px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #5479b1;
+    border-radius: 10px;
+    background-color: rgba(119, 128, 128, 0.356) ;
+}
+
+.container-filtro {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #3c3e44;
+    border-radius: 10px;
+    background-color: rgba(45, 93, 213, 0.356) ;
+}
+.container-Compras {
+    max-width: 1150px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #3c3e44;
+    border-radius: 10px;
+    background-color: rgba(45, 93, 213, 0.356) ;
+}

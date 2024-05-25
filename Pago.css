@@ -1,0 +1,30 @@
+
+
+
+.navbar-custom {
+    background-color: rgb(45, 93, 213) !important; 
+  }
+
+body {
+  background-color: #d8d9da;
+}
+
+
+
+
+.container-pago {
+    max-width: 850px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #3c3e44;
+    border-radius: 10px;
+    background-color: rgba(45, 93, 213, 0.356) ;
+}
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
