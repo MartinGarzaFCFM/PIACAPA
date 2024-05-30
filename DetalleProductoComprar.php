@@ -263,7 +263,7 @@ $.ajax({
 
             // Hacer la solicitud AJAX al servidor
             $.ajax({
-                url: 'db/Agregar_carrito_producto.php', // Reemplaza con la ruta correcta a tu script PHP
+                url: 'db/Agregar_Carrito_producto.php', // Reemplaza con la ruta correcta a tu script PHP
                 method: 'POST',
                 data: { idProducto: productoId, cantidad: cantidad, user_id: usuario_id },
                 dataType: 'json',
